@@ -1,0 +1,126 @@
+id,title,category,owner_role,due_offset_days,mandatory
+task-stage-cloud-preboard-00,Sign offer letter via DocuSign,admin,new_hire,-14,True
+task-stage-cloud-preboard-01,Submit ID documents for background check,compliance,HR,-10,True
+task-stage-cloud-preboard-02,Complete pre-boarding survey,cultural,new_hire,-7,False
+task-stage-cloud-preboard-03,Set up laptop shipment and home office stipend,admin,IT,-7,True
+task-stage-cloud-preboard-04,Connect with your buddy before day one,social,buddy,-3,False
+task-stage-cloud-day_1-00,Collect laptop and access badge,admin,IT,0,True
+task-stage-cloud-day_1-01,Attend new-hire orientation,cultural,HR,0,True
+task-stage-cloud-day_1-02,1:1 intro with your manager,social,manager,0,True
+task-stage-cloud-day_1-03,1:1 coffee with your buddy,social,buddy,1,True
+task-stage-cloud-day_1-04,Join team Slack channels and email groups,admin,new_hire,0,True
+task-stage-cloud-week_1-00,Complete security awareness training,compliance,new_hire,5,True
+task-stage-cloud-week_1-01,Read the practice capability deck,role,new_hire,5,True
+task-stage-cloud-week_1-02,Meet all members of your immediate team,social,manager,5,False
+task-stage-cloud-week_1-03,Set up billing profile and expenses account,admin,HR,3,True
+task-stage-cloud-week_1-04,Shadow a client call or delivery session,role,manager,7,False
+task-stage-cloud-day_30-00,Complete 30-day check-in with manager,cultural,manager,30,True
+task-stage-cloud-day_30-01,Submit first timesheet and expense report,admin,new_hire,30,True
+task-stage-cloud-day_30-02,Join at least one ERG or community of practice,social,new_hire,30,False
+task-stage-cloud-day_30-03,Complete role-specific onboarding module,role,new_hire,30,True
+task-stage-cloud-day_60-00,60-day performance conversation with manager,cultural,manager,60,True
+task-stage-cloud-day_60-01,Identify a stretch assignment or project,role,manager,60,False
+task-stage-cloud-day_60-02,Complete benefits enrollment,admin,new_hire,60,True
+task-stage-cloud-day_90-00,Complete 90-day review and set next-cycle goals,cultural,manager,90,True
+task-stage-cloud-day_90-01,Deliver a short 'what I learned' to the team,role,new_hire,90,False
+task-stage-cloud-day_90-02,Nominate yourself for a community lead role,social,new_hire,90,False
+task-stage-data-preboard-00,Sign offer letter via DocuSign,admin,new_hire,-14,True
+task-stage-data-preboard-01,Submit ID documents for background check,compliance,HR,-10,True
+task-stage-data-preboard-02,Complete pre-boarding survey,cultural,new_hire,-7,False
+task-stage-data-preboard-03,Set up laptop shipment and home office stipend,admin,IT,-7,True
+task-stage-data-preboard-04,Connect with your buddy before day one,social,buddy,-3,False
+task-stage-data-day_1-00,Collect laptop and access badge,admin,IT,0,True
+task-stage-data-day_1-01,Attend new-hire orientation,cultural,HR,0,True
+task-stage-data-day_1-02,1:1 intro with your manager,social,manager,0,True
+task-stage-data-day_1-03,1:1 coffee with your buddy,social,buddy,1,True
+task-stage-data-day_1-04,Join team Slack channels and email groups,admin,new_hire,0,True
+task-stage-data-week_1-00,Complete security awareness training,compliance,new_hire,5,True
+task-stage-data-week_1-01,Read the practice capability deck,role,new_hire,5,True
+task-stage-data-week_1-02,Meet all members of your immediate team,social,manager,5,False
+task-stage-data-week_1-03,Set up billing profile and expenses account,admin,HR,3,True
+task-stage-data-week_1-04,Shadow a client call or delivery session,role,manager,7,False
+task-stage-data-day_30-00,Complete 30-day check-in with manager,cultural,manager,30,True
+task-stage-data-day_30-01,Submit first timesheet and expense report,admin,new_hire,30,True
+task-stage-data-day_30-02,Join at least one ERG or community of practice,social,new_hire,30,False
+task-stage-data-day_30-03,Complete role-specific onboarding module,role,new_hire,30,True
+task-stage-data-day_60-00,60-day performance conversation with manager,cultural,manager,60,True
+task-stage-data-day_60-01,Identify a stretch assignment or project,role,manager,60,False
+task-stage-data-day_60-02,Complete benefits enrollment,admin,new_hire,60,True
+task-stage-data-day_90-00,Complete 90-day review and set next-cycle goals,cultural,manager,90,True
+task-stage-data-day_90-01,Deliver a short 'what I learned' to the team,role,new_hire,90,False
+task-stage-data-day_90-02,Nominate yourself for a community lead role,social,new_hire,90,False
+task-stage-cyber-preboard-00,Sign offer letter via DocuSign,admin,new_hire,-14,True
+task-stage-cyber-preboard-01,Submit ID documents for background check,compliance,HR,-10,True
+task-stage-cyber-preboard-02,Complete pre-boarding survey,cultural,new_hire,-7,False
+task-stage-cyber-preboard-03,Set up laptop shipment and home office stipend,admin,IT,-7,True
+task-stage-cyber-preboard-04,Connect with your buddy before day one,social,buddy,-3,False
+task-stage-cyber-day_1-00,Collect laptop and access badge,admin,IT,0,True
+task-stage-cyber-day_1-01,Attend new-hire orientation,cultural,HR,0,True
+task-stage-cyber-day_1-02,1:1 intro with your manager,social,manager,0,True
+task-stage-cyber-day_1-03,1:1 coffee with your buddy,social,buddy,1,True
+task-stage-cyber-day_1-04,Join team Slack channels and email groups,admin,new_hire,0,True
+task-stage-cyber-week_1-00,Complete security awareness training,compliance,new_hire,5,True
+task-stage-cyber-week_1-01,Read the practice capability deck,role,new_hire,5,True
+task-stage-cyber-week_1-02,Meet all members of your immediate team,social,manager,5,False
+task-stage-cyber-week_1-03,Set up billing profile and expenses account,admin,HR,3,True
+task-stage-cyber-week_1-04,Shadow a client call or delivery session,role,manager,7,False
+task-stage-cyber-day_30-00,Complete 30-day check-in with manager,cultural,manager,30,True
+task-stage-cyber-day_30-01,Submit first timesheet and expense report,admin,new_hire,30,True
+task-stage-cyber-day_30-02,Join at least one ERG or community of practice,social,new_hire,30,False
+task-stage-cyber-day_30-03,Complete role-specific onboarding module,role,new_hire,30,True
+task-stage-cyber-day_60-00,60-day performance conversation with manager,cultural,manager,60,True
+task-stage-cyber-day_60-01,Identify a stretch assignment or project,role,manager,60,False
+task-stage-cyber-day_60-02,Complete benefits enrollment,admin,new_hire,60,True
+task-stage-cyber-day_90-00,Complete 90-day review and set next-cycle goals,cultural,manager,90,True
+task-stage-cyber-day_90-01,Deliver a short 'what I learned' to the team,role,new_hire,90,False
+task-stage-cyber-day_90-02,Nominate yourself for a community lead role,social,new_hire,90,False
+task-stage-strategy-preboard-00,Sign offer letter via DocuSign,admin,new_hire,-14,True
+task-stage-strategy-preboard-01,Submit ID documents for background check,compliance,HR,-10,True
+task-stage-strategy-preboard-02,Complete pre-boarding survey,cultural,new_hire,-7,False
+task-stage-strategy-preboard-03,Set up laptop shipment and home office stipend,admin,IT,-7,True
+task-stage-strategy-preboard-04,Connect with your buddy before day one,social,buddy,-3,False
+task-stage-strategy-day_1-00,Collect laptop and access badge,admin,IT,0,True
+task-stage-strategy-day_1-01,Attend new-hire orientation,cultural,HR,0,True
+task-stage-strategy-day_1-02,1:1 intro with your manager,social,manager,0,True
+task-stage-strategy-day_1-03,1:1 coffee with your buddy,social,buddy,1,True
+task-stage-strategy-day_1-04,Join team Slack channels and email groups,admin,new_hire,0,True
+task-stage-strategy-week_1-00,Complete security awareness training,compliance,new_hire,5,True
+task-stage-strategy-week_1-01,Read the practice capability deck,role,new_hire,5,True
+task-stage-strategy-week_1-02,Meet all members of your immediate team,social,manager,5,False
+task-stage-strategy-week_1-03,Set up billing profile and expenses account,admin,HR,3,True
+task-stage-strategy-week_1-04,Shadow a client call or delivery session,role,manager,7,False
+task-stage-strategy-day_30-00,Complete 30-day check-in with manager,cultural,manager,30,True
+task-stage-strategy-day_30-01,Submit first timesheet and expense report,admin,new_hire,30,True
+task-stage-strategy-day_30-02,Join at least one ERG or community of practice,social,new_hire,30,False
+task-stage-strategy-day_30-03,Complete role-specific onboarding module,role,new_hire,30,True
+task-stage-strategy-day_60-00,60-day performance conversation with manager,cultural,manager,60,True
+task-stage-strategy-day_60-01,Identify a stretch assignment or project,role,manager,60,False
+task-stage-strategy-day_60-02,Complete benefits enrollment,admin,new_hire,60,True
+task-stage-strategy-day_90-00,Complete 90-day review and set next-cycle goals,cultural,manager,90,True
+task-stage-strategy-day_90-01,Deliver a short 'what I learned' to the team,role,new_hire,90,False
+task-stage-strategy-day_90-02,Nominate yourself for a community lead role,social,new_hire,90,False
+task-stage-appdev-preboard-00,Sign offer letter via DocuSign,admin,new_hire,-14,True
+task-stage-appdev-preboard-01,Submit ID documents for background check,compliance,HR,-10,True
+task-stage-appdev-preboard-02,Complete pre-boarding survey,cultural,new_hire,-7,False
+task-stage-appdev-preboard-03,Set up laptop shipment and home office stipend,admin,IT,-7,True
+task-stage-appdev-preboard-04,Connect with your buddy before day one,social,buddy,-3,False
+task-stage-appdev-day_1-00,Collect laptop and access badge,admin,IT,0,True
+task-stage-appdev-day_1-01,Attend new-hire orientation,cultural,HR,0,True
+task-stage-appdev-day_1-02,1:1 intro with your manager,social,manager,0,True
+task-stage-appdev-day_1-03,1:1 coffee with your buddy,social,buddy,1,True
+task-stage-appdev-day_1-04,Join team Slack channels and email groups,admin,new_hire,0,True
+task-stage-appdev-week_1-00,Complete security awareness training,compliance,new_hire,5,True
+task-stage-appdev-week_1-01,Read the practice capability deck,role,new_hire,5,True
+task-stage-appdev-week_1-02,Meet all members of your immediate team,social,manager,5,False
+task-stage-appdev-week_1-03,Set up billing profile and expenses account,admin,HR,3,True
+task-stage-appdev-week_1-04,Shadow a client call or delivery session,role,manager,7,False
+task-stage-appdev-day_30-00,Complete 30-day check-in with manager,cultural,manager,30,True
+task-stage-appdev-day_30-01,Submit first timesheet and expense report,admin,new_hire,30,True
+task-stage-appdev-day_30-02,Join at least one ERG or community of practice,social,new_hire,30,False
+task-stage-appdev-day_30-03,Complete role-specific onboarding module,role,new_hire,30,True
+task-stage-appdev-day_60-00,60-day performance conversation with manager,cultural,manager,60,True
+task-stage-appdev-day_60-01,Identify a stretch assignment or project,role,manager,60,False
+task-stage-appdev-day_60-02,Complete benefits enrollment,admin,new_hire,60,True
+task-stage-appdev-day_90-00,Complete 90-day review and set next-cycle goals,cultural,manager,90,True
+task-stage-appdev-day_90-01,Deliver a short 'what I learned' to the team,role,new_hire,90,False
+task-stage-appdev-day_90-02,Nominate yourself for a community lead role,social,new_hire,90,False

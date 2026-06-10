@@ -1,0 +1,21 @@
+id,name,function,practice_id
+team-cloud-infrastructure,Cloud Infrastructure,Cloud Infrastructure,practice-cloud
+team-cloud-architecture,Cloud Architecture,Cloud Architecture,practice-cloud
+team-cloud-migration,Cloud Migration,Cloud Migration,practice-cloud
+team-finops-governance,FinOps & Governance,FinOps & Governance,practice-cloud
+team-data-engineering,Data Engineering,Data Engineering,practice-data
+team-analytics-bi,Analytics & BI,Analytics & BI,practice-data
+team-ml-ai,ML & AI,ML & AI,practice-data
+team-data-governance,Data Governance,Data Governance,practice-data
+team-security-operations,Security Operations,Security Operations,practice-cyber
+team-identity-access,Identity & Access,Identity & Access,practice-cyber
+team-grc-compliance,GRC & Compliance,GRC & Compliance,practice-cyber
+team-red-team,Red Team,Red Team,practice-cyber
+team-digital-strategy,Digital Strategy,Digital Strategy,practice-strategy
+team-org-transformation,Org Transformation,Org Transformation,practice-strategy
+team-pmo-delivery,PMO & Delivery,PMO & Delivery,practice-strategy
+team-m-a-advisory,M&A Advisory,M&A Advisory,practice-strategy
+team-full-stack-engineering,Full-Stack Engineering,Full-Stack Engineering,practice-appdev
+team-platform-engineering,Platform Engineering,Platform Engineering,practice-appdev
+team-mobile-ux,Mobile & UX,Mobile & UX,practice-appdev
+team-devsecops,DevSecOps,DevSecOps,practice-appdev

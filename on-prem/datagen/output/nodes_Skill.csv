@@ -1,0 +1,32 @@
+id,name,category
+skill-aws,Amazon Web Services,Cloud
+skill-azure,Microsoft Azure,Cloud
+skill-gcp,Google Cloud Platform,Cloud
+skill-k8s,Kubernetes,Cloud
+skill-terraform,Terraform,Cloud
+skill-spark,Apache Spark,Data
+skill-dbt,dbt,Data
+skill-databricks,Databricks,Data
+skill-sql,SQL & Data Modeling,Data
+skill-python,Python,Data
+skill-mlops,MLOps,AI/ML
+skill-genai,Generative AI,AI/ML
+skill-bedrock,Amazon Bedrock,AI/ML
+skill-llmops,LLMOps,AI/ML
+skill-soc,SOC Operations,Cyber
+skill-iam,Identity & Access Mgmt,Cyber
+skill-devsecops,DevSecOps,Cyber
+skill-pentest,Penetration Testing,Cyber
+skill-change,Change Management,Strategy
+skill-ops-model,Operating Model Design,Strategy
+skill-ma,M&A Due Diligence,Strategy
+skill-roadmap,Technology Roadmapping,Strategy
+skill-proposal,Proposal Writing,Leadership
+skill-delivery,Delivery Management,Leadership
+skill-account,Account Management,Leadership
+skill-workshop,Workshop Facilitation,Leadership
+skill-react,React,App Dev
+skill-typescript,TypeScript,App Dev
+skill-java,Java,App Dev
+skill-cicd,CI/CD Pipelines,App Dev
+skill-unity-catalog,Databricks Unity Catalog,Data

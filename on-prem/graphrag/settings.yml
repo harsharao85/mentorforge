@@ -1,0 +1,98 @@
+# MS GraphRAG 2.x configuration for MentorForge on-prem indexer.
+# Full pipeline mode: entity extraction, relationship mapping, community detection,
+# and community reports all run at index time.
+# LLM = Ollama (OpenAI-compatible endpoint).
+# Embeddings = nomic-embed-text via Ollama (768 dims, matches Neo4j vector index).
+
+llm:
+  api_key: ${GRAPHRAG_API_KEY}
+  type: openai_chat
+  model: llama3.3:70b
+  api_base: ${OLLAMA_BASE_URL:-http://ollama:11434}/v1
+  max_tokens: 4096
+  request_timeout: 180.0
+  concurrent_requests: 2
+
+parallelization:
+  stagger: 0.5
+  num_threads: 2
+
+async_mode: threaded
+
+embeddings:
+  async_mode: threaded
+  llm:
+    api_key: ${GRAPHRAG_API_KEY}
+    type: openai_embedding
+    model: nomic-embed-text
+    api_base: ${OLLAMA_BASE_URL:-http://ollama:11434}/v1
+    max_tokens: 8192
+    concurrent_requests: 2
+
+chunks:
+  size: 400
+  overlap: 80
+  group_by_columns: [id]
+
+input:
+  type: file
+  file_type: text
+  base_dir: /app/input
+
+cache:
+  type: file
+  base_dir: /app/cache
+
+storage:
+  type: file
+  base_dir: /app/output
+
+reporting:
+  type: file
+  base_dir: /app/logs
+  level: INFO
+
+# Full entity extraction: runs LLM over every chunk at index time.
+# Entity types aligned to Graph Schema v2 so extracted entities merge with the org graph.
+# max_gleanings=2 means the LLM gets a second pass to catch missed entities.
+entity_extraction:
+  entity_types:
+    - person          # merges with Person nodes from TASK-001 org graph
+    - organization    # client names (Atlas-Health, Northwind, Meridian, Helios)
+    - team            # merges with Team nodes
+    - practice        # merges with Practice nodes
+    - engagement      # merges with Engagement nodes
+    - skill           # merges with Skill nodes (e.g. Unity Catalog, HIPAA)
+    - concept         # frameworks, methodologies
+    - technology      # Databricks, AWS, dbt, Terraform
+    - process         # runbook steps, policies
+    - location        # office locations
+    - policy          # compliance policies
+    - community       # ERGs and communities of practice
+  max_gleanings: 2
+
+# Deduplicate and summarise entity descriptions across chunks.
+summarize_descriptions:
+  max_length: 500
+
+# Claim extraction is expensive; enable when the corpus is policy/compliance heavy.
+claim_extraction:
+  enabled: false
+
+# Community reports: LLM-written summaries of each entity cluster.
+# These power the global and community-context retrieval paths.
+community_reports:
+  max_length: 2000
+  max_input_length: 8000
+
+# Leiden community detection.
+cluster_graph:
+  max_cluster_size: 10
+
+umap:
+  enabled: false
+
+snapshots:
+  graphml: false
+  raw_entities: false
+  top_level_nodes: false

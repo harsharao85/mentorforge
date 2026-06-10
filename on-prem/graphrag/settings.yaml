@@ -1,0 +1,120 @@
+# GraphRAG 3.x configuration for MentorForge on-prem indexer.
+# Full pipeline mode: entity extraction, relationship mapping, community detection,
+# and community reports all run at index time.
+# LLM = Ollama (OpenAI-compatible endpoint via litellm).
+# Embeddings = nomic-embed-text via Ollama (768 dims → Neo4j vector index).
+#
+# Mac path: OLLAMA_BASE_URL=http://localhost:11434 (native Ollama, set by ingest_native.sh)
+# Linux path: OLLAMA_BASE_URL=http://ollama:11434 (container DNS, set in docker-compose.yml)
+
+### LLM settings ###
+
+completion_models:
+  default_completion_model:
+    model_provider: openai
+    model: llama3.3:70b
+    api_base: ${OLLAMA_BASE_URL}/v1
+    auth_method: api_key
+    api_key: ${GRAPHRAG_API_KEY}
+    max_tokens: 4096
+    request_timeout: 180.0
+    concurrent_requests: 2
+    requests_per_minute: 10
+    retry:
+      type: exponential_backoff
+      max_retries: 3
+
+embedding_models:
+  default_embedding_model:
+    model_provider: openai
+    model: nomic-embed-text
+    api_base: ${OLLAMA_BASE_URL}/v1
+    auth_method: api_key
+    api_key: ${GRAPHRAG_API_KEY}
+    max_tokens: 8192
+    concurrent_requests: 2
+    retry:
+      type: exponential_backoff
+      max_retries: 3
+
+### Document processing ###
+
+input:
+  type: text
+  file_pattern: ".*\\.(txt|md)"
+
+chunking:
+  type: tokens
+  size: 400
+  overlap: 80
+  encoding_model: cl100k_base
+
+### Storage ###
+
+input_storage:
+  type: file
+  base_dir: "input"
+
+output_storage:
+  type: file
+  base_dir: "output"
+
+reporting:
+  type: file
+  base_dir: "logs"
+
+cache:
+  type: json
+  storage:
+    type: file
+    base_dir: "cache"
+
+vector_store:
+  type: lancedb
+  db_uri: "output/lancedb"
+
+### Pipeline workflow ###
+
+embed_text:
+  embedding_model_id: default_embedding_model
+
+extract_graph:
+  completion_model_id: default_completion_model
+  entity_types:
+    - person          # merges with Person nodes from TASK-001 org graph
+    - organization    # client names (Atlas-Health, Northwind, Meridian, Helios)
+    - team            # merges with Team nodes
+    - practice        # merges with Practice nodes
+    - engagement      # merges with Engagement nodes
+    - skill           # merges with Skill nodes (e.g. Unity Catalog, HIPAA)
+    - concept         # frameworks, methodologies
+    - technology      # Databricks, AWS, dbt, Terraform
+    - process         # runbook steps, policies
+    - location        # office locations
+    - policy          # compliance policies
+    - community       # ERGs and communities of practice
+  max_gleanings: 2
+
+summarize_descriptions:
+  completion_model_id: default_completion_model
+  max_length: 500
+
+extract_graph_nlp:
+  text_analyzer:
+    extractor_type: regex_english
+
+cluster_graph:
+  max_cluster_size: 10
+
+extract_claims:
+  enabled: false
+  completion_model_id: default_completion_model
+
+community_reports:
+  completion_model_id: default_completion_model
+  max_length: 2000
+  max_input_length: 8000
+
+snapshots:
+  graphml: false
+  embeddings: false

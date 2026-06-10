@@ -1,0 +1,9 @@
+id,title,role_family,ladder_level
+role-analyst,Analyst,Delivery,Analyst
+role-consultant,Consultant,Delivery,Consultant
+role-senior-consultant,Senior Consultant,Delivery,Senior Consultant
+role-manager,Manager,Delivery,Manager
+role-senior-manager,Senior Manager,Leadership,Senior Manager
+role-director,Director,Leadership,Director
+role-partner,Partner,Leadership,Partner
+role-managing-partner,Managing Partner,Leadership,Managing Partner

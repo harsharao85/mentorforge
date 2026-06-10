@@ -1,0 +1,9 @@
+id,office,geo,timezone
+loc-van,Vancouver,North America,America/Vancouver
+loc-tor,Toronto,North America,America/Toronto
+loc-nyc,New York,North America,America/New_York
+loc-lon,London,EMEA,Europe/London
+loc-sgp,Singapore,APAC,Asia/Singapore
+loc-syd,Sydney,APAC,Australia/Sydney
+loc-fra,Frankfurt,EMEA,Europe/Berlin
+loc-dub,Dubai,EMEA,Asia/Dubai

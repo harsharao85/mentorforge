@@ -1,0 +1,370 @@
+{
+  "generated_at": "2026-05-31",
+  "company": "Northstar Consulting",
+  "total_docs": 38,
+  "demo_cast": {
+    "company": "Northstar Consulting",
+    "new_hires": {
+      "priya": {
+        "id": "person-0371",
+        "name": "Priya Nair",
+        "practice": "Data",
+        "location": "Vancouver",
+        "level": "Senior Consultant"
+      },
+      "marcus": {
+        "id": "person-0370",
+        "name": "Marcus Lee",
+        "practice": "Cloud",
+        "location": "Toronto",
+        "level": "Consultant"
+      },
+      "aisha": {
+        "id": "person-0373",
+        "name": "Aisha Rahman",
+        "practice": "Strategy",
+        "location": "London",
+        "level": "Analyst"
+      }
+    },
+    "staff": {
+      "sarah": {
+        "id": "person-0002",
+        "name": "Sarah Chen",
+        "role": "Data Practice Lead"
+      },
+      "ben": {
+        "id": "person-0042",
+        "name": "Ben Okonkwo",
+        "role": "Data Manager, Priya's manager"
+      },
+      "tom": {
+        "id": "person-0187",
+        "name": "Tom Rivera",
+        "role": "Senior Consultant, Priya's buddy"
+      },
+      "lena": {
+        "id": "person-0012",
+        "name": "Lena Hofer",
+        "role": "Atlas-Health engagement lead"
+      },
+      "dana": {
+        "id": "person-0076",
+        "name": "Dana Okafor",
+        "role": "Cloud Senior Consultant, Unity Catalog expert"
+      }
+    },
+    "engagements": {
+      "atlas_health": "engagement-0002",
+      "northwind": "engagement-0008",
+      "meridian": "engagement-0001",
+      "helios": "engagement-0003"
+    }
+  },
+  "docs": [
+    {
+      "file": "hero-atlas-health-data-stack-runbook.md",
+      "source_path": "hero/atlas-health-data-stack-runbook.md",
+      "source_system": "{system: s3, instance: northstar-policy-bucket, source_id: \"RUN-AH-2026-01\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Atlas-Health Data Stack Runbook\", tags: [atlas-health, runbook, data, hipaa, databricks]}",
+      "title": "{type: runbook, title: \"Atlas-Health Data Stack Runbook\", tags: [atlas-health, runbook, data, hipaa, databricks]}",
+      "classification": "{sensitivity: confidential, acl: [atlas-health-team]}"
+    },
+    {
+      "file": "hero-cloud-migration-methodology.md",
+      "source_path": "hero/cloud-migration-methodology.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"CLOUD-METH-001\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Cloud Migration Methodology\", tags: [cloud, migration, aws, methodology, consultant]}",
+      "title": "{type: methodology, title: \"Cloud Migration Methodology\", tags: [cloud, migration, aws, methodology, consultant]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-data-practice-playbook.md",
+      "source_path": "hero/data-practice-playbook.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"DATA-001\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Data Practice Playbook\", tags: [data, methodology, onboarding]}",
+      "title": "{type: methodology, title: \"Data Practice Playbook\", tags: [data, methodology, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-databricks-migration-retrospective-cortland.md",
+      "source_path": "hero/databricks-migration-retrospective-cortland.md",
+      "source_system": "",
+      "type": "",
+      "title": "hero-databricks-migration-retrospective-cortland.md",
+      "classification": ""
+    },
+    {
+      "file": "hero-erg-cloud-guild.md",
+      "source_path": "hero/erg/cloud-guild.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ERG-cloud-guild\", connector_version: \"1.0\"}",
+      "type": "{type: culture, title: \"Cloud Guild\", tags: [community-of-practice, cloud, aws, databricks, technical]}",
+      "title": "{type: culture, title: \"Cloud Guild\", tags: [community-of-practice, cloud, aws, databricks, technical]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-erg-data-science-community.md",
+      "source_path": "hero/erg/data-science-community.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ERG-data-science-community\", connector_version: \"1.0\"}",
+      "type": "{type: culture, title: \"Data Science Community\", tags: [community-of-practice, data, ml, analytics, databricks]}",
+      "title": "{type: culture, title: \"Data Science Community\", tags: [community-of-practice, data, ml, analytics, databricks]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-erg-newcomers.md",
+      "source_path": "hero/erg/newcomers.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ERG-newcomers\", connector_version: \"1.0\"}",
+      "type": "{type: culture, title: \"Newcomers ERG\", tags: [erg, new-hire, belonging, community, onboarding]}",
+      "title": "{type: culture, title: \"Newcomers ERG\", tags: [erg, new-hire, belonging, community, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-erg-women-in-tech.md",
+      "source_path": "hero/erg/women-in-tech.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ERG-women-in-tech\", connector_version: \"1.0\"}",
+      "type": "{type: culture, title: \"Women in Tech ERG\", tags: [erg, women, belonging, onboarding, community]}",
+      "title": "{type: culture, title: \"Women in Tech ERG\", tags: [erg, women, belonging, onboarding, community]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-erg-welcome-guide.md",
+      "source_path": "hero/erg-welcome-guide.md",
+      "source_system": "",
+      "type": "",
+      "title": "hero-erg-welcome-guide.md",
+      "classification": ""
+    },
+    {
+      "file": "hero-hipaa-data-handling-policy.md",
+      "source_path": "hero/hipaa-data-handling-policy.md",
+      "source_system": "",
+      "type": "",
+      "title": "hero-hipaa-data-handling-policy.md",
+      "classification": ""
+    },
+    {
+      "file": "hero-hipaa-handling-policy.md",
+      "source_path": "hero/hipaa-handling-policy.md",
+      "source_system": "{system: s3, instance: northstar-policy-bucket, source_id: \"POLICY-HIPAA-2025\", connector_version: \"1.0\"}",
+      "type": "{type: policy, title: \"HIPAA Data Handling Policy\", tags: [hipaa, compliance, healthcare, policy]}",
+      "title": "{type: policy, title: \"HIPAA Data Handling Policy\", tags: [hipaa, compliance, healthcare, policy]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-how-we-run-data-engagements.md",
+      "source_path": "hero/how-we-run-data-engagements.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"DATA-ENGAGE-001\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"How We Run Data Engagements\", tags: [data, methodology, delivery, consulting]}",
+      "title": "{type: methodology, title: \"How We Run Data Engagements\", tags: [data, methodology, delivery, consulting]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-jones-bean-burton-data-stack-runbook.md",
+      "source_path": "hero/jones-bean-burton-data-stack-runbook.md",
+      "source_system": "",
+      "type": "",
+      "title": "hero-jones-bean-burton-data-stack-runbook.md",
+      "classification": ""
+    },
+    {
+      "file": "hero-meridian-unity-catalog-retrospective.md",
+      "source_path": "hero/meridian-unity-catalog-retrospective.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"RETRO-MER-UC-2025\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Meridian Unity Catalog Migration Retrospective\", tags: [databricks, unity-catalog, cloud, migration, retrospective, data-governance]}",
+      "title": "{type: methodology, title: \"Meridian Unity Catalog Migration Retrospective\", tags: [databricks, unity-catalog, cloud, migration, retrospective, data-governance]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "hero-navigating-your-first-90-days.md",
+      "source_path": "hero/navigating-your-first-90-days.md",
+      "source_system": "{system: s3, instance: northstar-policy-bucket, source_id: \"CULTURE-90D-2026\", connector_version: \"1.0\"}",
+      "type": "{type: culture, title: \"Navigating Your First 90 Days at Northstar\", tags: [onboarding, culture, new-hire, belonging, first-90-days]}",
+      "title": "{type: culture, title: \"Navigating Your First 90 Days at Northstar\", tags: [onboarding, culture, new-hire, belonging, first-90-days]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/faq-cloud-onboarding.md",
+      "source_path": "faq-cloud-onboarding.md",
+      "source_system": "{system: kb, instance: northstar-kb, source_id: \"FAQ_CLOUD_ONBOARDING\", connector_version: \"1.0\"}",
+      "type": "{type: kb, title: \"FAQ \u2014 Cloud Onboarding\", tags: [cloud, faq, onboarding]}",
+      "title": "{type: kb, title: \"FAQ \u2014 Cloud Onboarding\", tags: [cloud, faq, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/engagement-brief-helios.md",
+      "source_path": "engagement-brief-helios.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ENGAGEMENT_BRIEF_HELIOS\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Helios \u2014 Engagement Brief\", tags: [helios, engagement, brief]}",
+      "title": "{type: methodology, title: \"Helios \u2014 Engagement Brief\", tags: [helios, engagement, brief]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/engagement-brief-meridian.md",
+      "source_path": "engagement-brief-meridian.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ENGAGEMENT_BRIEF_MERIDIAN\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Meridian \u2014 Engagement Brief\", tags: [meridian, engagement, brief]}",
+      "title": "{type: methodology, title: \"Meridian \u2014 Engagement Brief\", tags: [meridian, engagement, brief]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/faq-cyber-onboarding.md",
+      "source_path": "faq-cyber-onboarding.md",
+      "source_system": "{system: kb, instance: northstar-kb, source_id: \"FAQ_CYBER_ONBOARDING\", connector_version: \"1.0\"}",
+      "type": "{type: kb, title: \"FAQ \u2014 Cyber Onboarding\", tags: [cyber, faq, onboarding]}",
+      "title": "{type: kb, title: \"FAQ \u2014 Cyber Onboarding\", tags: [cyber, faq, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/policy-data-standards.md",
+      "source_path": "policy-data-standards.md",
+      "source_system": "{system: s3, instance: northstar-s3, source_id: \"POLICY_DATA_STANDARDS\", connector_version: \"1.0\"}",
+      "type": "{type: policy, title: \"Data Practice Standards Policy\", tags: [data, policy, standards]}",
+      "title": "{type: policy, title: \"Data Practice Standards Policy\", tags: [data, policy, standards]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/faq-data-onboarding.md",
+      "source_path": "faq-data-onboarding.md",
+      "source_system": "{system: kb, instance: northstar-kb, source_id: \"FAQ_DATA_ONBOARDING\", connector_version: \"1.0\"}",
+      "type": "{type: kb, title: \"FAQ \u2014 Data Onboarding\", tags: [data, faq, onboarding]}",
+      "title": "{type: kb, title: \"FAQ \u2014 Data Onboarding\", tags: [data, faq, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/policy-cyber-standards.md",
+      "source_path": "policy-cyber-standards.md",
+      "source_system": "{system: s3, instance: northstar-s3, source_id: \"POLICY_CYBER_STANDARDS\", connector_version: \"1.0\"}",
+      "type": "{type: policy, title: \"Cyber Practice Standards Policy\", tags: [cyber, policy, standards]}",
+      "title": "{type: policy, title: \"Cyber Practice Standards Policy\", tags: [cyber, policy, standards]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-cloud-architecture.md",
+      "source_path": "runbook-cloud-architecture.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_CLOUD_ARCHITECTURE\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Cloud Architecture \u2014 Standard Runbook\", tags: [cloud-architecture, runbook, cloud]}",
+      "title": "{type: runbook, title: \"Cloud Architecture \u2014 Standard Runbook\", tags: [cloud-architecture, runbook, cloud]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/policy-strategy-standards.md",
+      "source_path": "policy-strategy-standards.md",
+      "source_system": "{system: s3, instance: northstar-s3, source_id: \"POLICY_STRATEGY_STANDARDS\", connector_version: \"1.0\"}",
+      "type": "{type: policy, title: \"Strategy Practice Standards Policy\", tags: [strategy, policy, standards]}",
+      "title": "{type: policy, title: \"Strategy Practice Standards Policy\", tags: [strategy, policy, standards]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-data-governance.md",
+      "source_path": "runbook-data-governance.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_DATA_GOVERNANCE\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Data Governance \u2014 Standard Runbook\", tags: [data-governance, runbook, data]}",
+      "title": "{type: runbook, title: \"Data Governance \u2014 Standard Runbook\", tags: [data-governance, runbook, data]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-data-engineering.md",
+      "source_path": "runbook-data-engineering.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_DATA_ENGINEERING\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Data Engineering \u2014 Standard Runbook\", tags: [data-engineering, runbook, data]}",
+      "title": "{type: runbook, title: \"Data Engineering \u2014 Standard Runbook\", tags: [data-engineering, runbook, data]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/faq-strategy-onboarding.md",
+      "source_path": "faq-strategy-onboarding.md",
+      "source_system": "{system: kb, instance: northstar-kb, source_id: \"FAQ_STRATEGY_ONBOARDING\", connector_version: \"1.0\"}",
+      "type": "{type: kb, title: \"FAQ \u2014 Strategy Onboarding\", tags: [strategy, faq, onboarding]}",
+      "title": "{type: kb, title: \"FAQ \u2014 Strategy Onboarding\", tags: [strategy, faq, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/engagement-brief-atlas-health.md",
+      "source_path": "engagement-brief-atlas-health.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ENGAGEMENT_BRIEF_ATLAS_HEALTH\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Atlas-Health \u2014 Engagement Brief\", tags: [atlas-health, engagement, brief]}",
+      "title": "{type: methodology, title: \"Atlas-Health \u2014 Engagement Brief\", tags: [atlas-health, engagement, brief]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/policy-cloud-standards.md",
+      "source_path": "policy-cloud-standards.md",
+      "source_system": "{system: s3, instance: northstar-s3, source_id: \"POLICY_CLOUD_STANDARDS\", connector_version: \"1.0\"}",
+      "type": "{type: policy, title: \"Cloud Practice Standards Policy\", tags: [cloud, policy, standards]}",
+      "title": "{type: policy, title: \"Cloud Practice Standards Policy\", tags: [cloud, policy, standards]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/policy-app-dev-standards.md",
+      "source_path": "policy-app-dev-standards.md",
+      "source_system": "{system: s3, instance: northstar-s3, source_id: \"POLICY_APP_DEV_STANDARDS\", connector_version: \"1.0\"}",
+      "type": "{type: policy, title: \"App Dev Practice Standards Policy\", tags: [app-dev, policy, standards]}",
+      "title": "{type: policy, title: \"App Dev Practice Standards Policy\", tags: [app-dev, policy, standards]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-ml-ai.md",
+      "source_path": "runbook-ml-ai.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_ML_AI\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"ML & AI \u2014 Standard Runbook\", tags: [ml-ai, runbook, cloud]}",
+      "title": "{type: runbook, title: \"ML & AI \u2014 Standard Runbook\", tags: [ml-ai, runbook, cloud]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-cloud-migration.md",
+      "source_path": "runbook-cloud-migration.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_CLOUD_MIGRATION\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Cloud Migration \u2014 Standard Runbook\", tags: [cloud-migration, runbook, cloud]}",
+      "title": "{type: runbook, title: \"Cloud Migration \u2014 Standard Runbook\", tags: [cloud-migration, runbook, cloud]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/engagement-brief-northwind.md",
+      "source_path": "engagement-brief-northwind.md",
+      "source_system": "{system: sharepoint, instance: northstar-sharepoint, source_id: \"ENGAGEMENT_BRIEF_NORTHWIND\", connector_version: \"1.0\"}",
+      "type": "{type: methodology, title: \"Northwind \u2014 Engagement Brief\", tags: [northwind, engagement, brief]}",
+      "title": "{type: methodology, title: \"Northwind \u2014 Engagement Brief\", tags: [northwind, engagement, brief]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-finops-governance.md",
+      "source_path": "runbook-finops-governance.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_FINOPS_GOVERNANCE\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"FinOps & Governance \u2014 Standard Runbook\", tags: [finops-governance, runbook, cloud]}",
+      "title": "{type: runbook, title: \"FinOps & Governance \u2014 Standard Runbook\", tags: [finops-governance, runbook, cloud]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/github-data-pipeline-standards.md",
+      "source_path": "github-data-pipeline-standards.md",
+      "source_system": "{system: github, instance: northstar-github, source_id: \"GITHUB_DATA_PIPELINE_STANDARDS\", connector_version: \"1.0\"}",
+      "type": "{type: code, title: \"Data Pipeline Development Standards\", tags: [data, pipeline, standards, github, python]}",
+      "title": "{type: code, title: \"Data Pipeline Development Standards\", tags: [data, pipeline, standards, github, python]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/faq-app-dev-onboarding.md",
+      "source_path": "faq-app-dev-onboarding.md",
+      "source_system": "{system: kb, instance: northstar-kb, source_id: \"FAQ_APP_DEV_ONBOARDING\", connector_version: \"1.0\"}",
+      "type": "{type: kb, title: \"FAQ \u2014 App Dev Onboarding\", tags: [app-dev, faq, onboarding]}",
+      "title": "{type: kb, title: \"FAQ \u2014 App Dev Onboarding\", tags: [app-dev, faq, onboarding]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-analytics-bi.md",
+      "source_path": "runbook-analytics-bi.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_ANALYTICS_BI\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Analytics & BI \u2014 Standard Runbook\", tags: [analytics-bi, runbook, cloud]}",
+      "title": "{type: runbook, title: \"Analytics & BI \u2014 Standard Runbook\", tags: [analytics-bi, runbook, cloud]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    },
+    {
+      "file": "_bulk/runbook-cloud-infrastructure.md",
+      "source_path": "runbook-cloud-infrastructure.md",
+      "source_system": "{system: confluence, instance: northstar-confluence, source_id: \"RUNBOOK_CLOUD_INFRASTRUCTURE\", connector_version: \"1.0\"}",
+      "type": "{type: runbook, title: \"Cloud Infrastructure \u2014 Standard Runbook\", tags: [cloud-infrastructure, runbook, cloud]}",
+      "title": "{type: runbook, title: \"Cloud Infrastructure \u2014 Standard Runbook\", tags: [cloud-infrastructure, runbook, cloud]}",
+      "classification": "{sensitivity: internal, acl: [all-employees]}"
+    }
+  ]
+}

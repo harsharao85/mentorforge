@@ -1,0 +1,200 @@
+name: CI
+
+# Runs on every PR and on pushes to main.
+#
+# ⚠️  PUBLIC-REPO SECURITY POSTURE — READ BEFORE ADDING JOBS
+# This repo is public. Fork PRs run untrusted code, so this workflow must NEVER
+# expose AWS credentials or OIDC tokens to fork-originated events.
+# Phase 1 is deploy-free — safe by construction (no AWS calls anywhere).
+# When Phase 2 adds an OIDC role, scope it to a protected environment so
+# fork PRs cannot trigger it (see CI/CD Plan Phase 2 notes).
+#
+# Minimum permissions declared at workflow level — all jobs inherit these
+# unless they override.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+
+  # ── 1. Lint + typecheck ────────────────────────────────────────────────────
+  lint-typecheck:
+    name: Lint + typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: |
+            aws/package-lock.json
+            frontend/package-lock.json
+
+      - name: Install CDK deps
+        run: npm ci
+        working-directory: aws
+
+      - name: TypeScript typecheck — CDK
+        run: npm run typecheck
+        working-directory: aws
+
+      - name: Install frontend deps
+        run: npm ci
+        working-directory: frontend
+
+      - name: TypeScript typecheck — frontend
+        run: npm run typecheck
+        working-directory: frontend
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install ruff
+        run: pip install ruff
+
+      # Lint all hand-written Python: Lambda handlers + agent runtime.
+      # Ignore E501 (line length) — long doc strings in Lambda files are intentional.
+      - name: Python lint — ruff
+        # E402: deferred imports in Lambda files (boto3 imported after logging setup)
+        # E501: line length — intentionally long lines in Lambda handlers
+        # E702: semicolons — intentional terse seq-incrementing pattern in signal emitters
+        run: ruff check aws/lambdas aws/agent --ignore E402,E501,E702
+
+  # ── 2. Unit tests ─────────────────────────────────────────────────────────
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    needs: lint-typecheck
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install test dependencies
+        run: pip install -r aws/lambdas/dev-requirements.txt
+
+      - name: Run Python unit tests
+        run: pytest aws/lambdas/tests/ -v --tb=short
+
+  # ── 3. CDK synth ──────────────────────────────────────────────────────────
+  # No AWS credentials needed — synth generates the CloudFormation template
+  # locally. We pass a dummy account so stack.account resolves (bucket names etc).
+  cdk-synth:
+    name: CDK synth
+    runs-on: ubuntu-latest
+    needs: lint-typecheck
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: aws/package-lock.json
+
+      - name: Install CDK deps
+        run: npm ci
+        working-directory: aws
+
+      - name: CDK synth (no AWS credentials)
+        # No account context passed — CDK uses unresolved tokens (${AWS::AccountId})
+        # so no credential lookup is needed. The CloudFormation template is valid.
+        run: npx cdk synth --quiet
+        working-directory: aws
+
+      - name: Upload cloud assembly
+        uses: actions/upload-artifact@v4
+        with:
+          name: cdk-assembly
+          path: aws/cdk.out/
+          retention-days: 1
+
+  # ── 4. Security scan: cdk-nag + dep audit + container scan ────────────────
+  # All checks are credential-free (no AWS calls).
+  security-scan:
+    name: Security scan
+    runs-on: ubuntu-latest
+    needs: cdk-synth
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: aws/package-lock.json
+
+      - name: Install CDK deps
+        run: npm ci
+        working-directory: aws
+
+      # cdk-nag: AwsSolutions checks applied during synth when CDK_NAG=1.
+      # Phase 1 — advisory output (the step always exits 0). The nag violations
+      # appear in the job log as annotations on the synthesized template.
+      # Phase 2: add NagSuppressions for intentional demo deviations and set
+      # --strict to gate on any unsuppressed ERROR-level finding.
+      - name: cdk-nag (Phase 1 — advisory)
+        run: |
+          CDK_NAG=1 npx cdk synth --quiet 2>&1 | tee /tmp/nag.log || true
+          echo ""
+          echo "── cdk-nag summary ──────────────────────────────────────────"
+          NAG_ERRORS=$(grep -c "\[Error\]" /tmp/nag.log 2>/dev/null || echo 0)
+          NAG_WARNS=$(grep -c "\[Warning\]" /tmp/nag.log 2>/dev/null || echo 0)
+          echo "Errors: $NAG_ERRORS  Warnings: $NAG_WARNS"
+          grep "\[Error\]\|\[Warning\]" /tmp/nag.log || echo "(no nag findings)"
+          echo "──────────────────────────────────────────────────────────────"
+        working-directory: aws
+
+      # npm audit: HIGH+ severity findings fail the job for CDK deps.
+      # Known transitive CDK ecosystem issues may be suppressed with
+      # `npm audit --allow ... ` when triaged. Run with continue-on-error for now
+      # to establish a baseline; harden in Phase 2 after triaging existing findings.
+      - name: npm audit — CDK (HIGH+)
+        run: npm audit --audit-level=high
+        working-directory: aws
+        continue-on-error: true  # Phase 1: baseline; triage + harden in Phase 2
+
+      - name: npm audit — frontend (HIGH+)
+        run: npm audit --audit-level=high
+        working-directory: frontend
+        continue-on-error: true  # Phase 1: baseline
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # pip-audit scans the agent runtime's Python deps for known CVEs.
+      # Fails the job on any unfixed HIGH/CRITICAL vulnerability.
+      - name: pip-audit — agent runtime
+        run: |
+          pip install pip-audit
+          pip-audit -r aws/agent/requirements.txt --progress-spinner off
+
+      # Trivy: filesystem scan of the agent directory.
+      # Catches CVEs in Python packages (requirements.txt) and Dockerfile issues.
+      # HIGH/CRITICAL only; ignore-unfixed=true filters out CVEs with no patch yet.
+      - name: Trivy — agent container scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          scan-ref: 'aws/agent'
+          severity: 'HIGH,CRITICAL'
+          exit-code: '1'
+          ignore-unfixed: true
+          format: 'table'

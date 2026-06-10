@@ -1,0 +1,13 @@
+id,type,name,blurb
+community-000,ERG,Women in Tech,Supporting and advancing women across all career stages.
+community-001,ERG,LGBTQ+ Alliance,Championing inclusion and visibility for LGBTQ+ employees.
+community-002,ERG,Cultural Mosaic,Celebrating the richness of our global cultural backgrounds.
+community-003,ERG,Early Career Network,Helping analysts and consultants build the foundations they need.
+community-004,ERG,Parents & Caregivers,Peer support and resources for working parents and caregivers.
+community-005,community_of_practice,Cloud Guild,"Deep dives into cloud architecture, patterns, and vendor news."
+community-006,community_of_practice,Data Science Community,"Cross-practice learning on ML, analytics, and data engineering."
+community-007,community_of_practice,Security Community,"Threat intel sharing, CTF nights, and security career development."
+community-008,community_of_practice,AI/GenAI Guild,"Exploring generative AI use cases, LLMOps, and responsible AI."
+community-009,interest_group,Outdoor Adventure,"Hiking, skiing, kayaking — any excuse to get outside together."
+community-010,interest_group,Foodies & Home Chefs,"Recipe swaps, lunch spots, and the annual chili cook-off."
+community-011,interest_group,Investors & Markets,"Market watchers, FIRE enthusiasts, and the occasional options trader."

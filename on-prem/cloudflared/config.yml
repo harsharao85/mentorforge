@@ -1,0 +1,19 @@
+# MentorForge demo wire — STABLE named Cloudflare tunnel (TASK-008 / ADR-006).
+# Stable hostname means a restart re-attaches to the same URL — no Gateway re-provision,
+# no cdk deploy. demo_up.sh runs:  cloudflared tunnel --config <this> run mentorforge-demo
+#
+# tunnel id + credentials are this machine's `mentorforge-demo` tunnel (created via
+# `cloudflared tunnel create mentorforge-demo`). The credentials .json is a SECRET and
+# lives in ~/.cloudflared (outside the repo). For another operator: create your own tunnel
+# + `cloudflared tunnel route dns <tunnel> <your-hostname>` and point this config at it.
+#
+# NOTE (flagged to Claudian): the authed cloudflared account owns meringue-app.com, not
+# raoharsha.com — so the stable hostname is mentorforge.meringue-app.com. The wire is
+# internal Gateway→MCP plumbing (invisible to demo viewers), so the zone is cosmetic.
+tunnel: 20a61484-ce52-431b-8994-5a616dcb70f2
+credentials-file: /Users/hr/.cloudflared/20a61484-ce52-431b-8994-5a616dcb70f2.json
+
+ingress:
+  - hostname: mentorforge.meringue-app.com
+    service: http://localhost:8443
+  - service: http_status:404

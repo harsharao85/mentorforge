@@ -1,0 +1,11 @@
+from_id,to_id
+person-0006,team-cloud-migration
+person-0007,team-data-governance
+person-0008,team-grc-compliance
+person-0009,team-org-transformation
+person-0010,team-platform-engineering
+person-0011,team-cloud-architecture
+person-0012,team-ml-ai
+person-0013,team-security-operations
+person-0014,team-digital-strategy
+person-0015,team-devsecops

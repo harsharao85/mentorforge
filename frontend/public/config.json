@@ -1,0 +1,9 @@
+{
+  "region": "us-east-1",
+  "cognitoDomain": "https://<CognitoDomainPrefix from cdk deploy outputs>.auth.us-east-1.amazoncognito.com",
+  "clientId": "<UserPoolClientId from cdk deploy outputs>",
+  "wssUrl": "wss://<WssUrl from cdk deploy outputs>",
+  "historyApiUrl": "<HistoryApiUrl from cdk deploy outputs>",
+  "scopes": "openid email profile",
+  "learnerName": "Priya Nair"
+}

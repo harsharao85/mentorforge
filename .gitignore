@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.venv/
+*.egg-info/
+
+# Build output
+dist/
+cdk.out/
+
+# CDK account context (carries deployer account ID — do not commit)
+cdk.context.json
+
+# Env files
+**/.env
+**/.env.local
+.env
+.env.local
+*.env
+
+# GraphRAG runtime output (large, regenerable — runs on the on-prem VM)
+on-prem/graphrag/output/
+on-prem/graphrag/cache/
+on-prem/graphrag/logs/
+on-prem/graphrag/input/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Test output
+test-results/
+playwright-report/
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# GraphRAG generated artifacts (regenerable; bloat + local paths in logs/caches)
+on-prem/graphrag/.smoke_run/
+on-prem/graphrag/.smoke_input/
+on-prem/graphrag/output/
+on-prem/graphrag/cache/
+on-prem/graphrag/logs/

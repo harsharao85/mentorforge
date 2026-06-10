@@ -1,0 +1,12 @@
+{
+  "name": "mentorforge-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test:s3": "playwright test e2e/task012_s3_artifacts.spec.ts",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
+}
