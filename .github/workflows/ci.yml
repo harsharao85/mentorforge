@@ -190,7 +190,7 @@ jobs:
       # Catches CVEs in Python packages (requirements.txt) and Dockerfile issues.
       # HIGH/CRITICAL only; ignore-unfixed=true filters out CVEs with no patch yet.
       - name: Trivy — agent container scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           scan-type: 'fs'
           scan-ref: 'aws/agent'
